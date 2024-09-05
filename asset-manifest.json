@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/modern-ai-site/static/css/main.e6c13ad2.css",
+    "main.js": "/modern-ai-site/static/js/main.b8a66aa5.js",
+    "static/js/453.ff2ce219.chunk.js": "/modern-ai-site/static/js/453.ff2ce219.chunk.js",
+    "static/media/unifycx-logo.webp": "/modern-ai-site/static/media/unifycx-logo.a3421d874c854a2af782.webp",
+    "index.html": "/modern-ai-site/index.html",
+    "main.e6c13ad2.css.map": "/modern-ai-site/static/css/main.e6c13ad2.css.map",
+    "main.b8a66aa5.js.map": "/modern-ai-site/static/js/main.b8a66aa5.js.map",
+    "453.ff2ce219.chunk.js.map": "/modern-ai-site/static/js/453.ff2ce219.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.b8a66aa5.js"
+  ]
+}
