@@ -1,0 +1,5 @@
+   "homepage": "https://harikravich.github.io/modern-ai-site",
+   "scripts": {
+     "predeploy": "npm run build",
+     "deploy": "gh-pages -d build"
+   }
