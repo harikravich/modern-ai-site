@@ -18,6 +18,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     background-color: #FFFFFF;
     color: #333333;
+    font-size: 16px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 `;
 
@@ -29,18 +33,30 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5%;
+  padding: 1rem 5%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 1rem 2%;
+  }
 `;
 
 const Logo = styled.img`
-  height: 40px;
+  height: 2.5rem;
+  @media (max-width: 768px) {
+    margin-bottom: 1rem;
+  }
 `;
 
 const Nav = styled.nav`
   display: flex;
-  gap: 30px;
+  gap: 1.875rem;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
 `;
 
 const NavLink = styled.a`
@@ -48,7 +64,6 @@ const NavLink = styled.a`
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
-
   &:hover {
     color: #0056b3;
   }
@@ -63,13 +78,15 @@ const HeroSection = styled.section`
   display: flex;
   min-height: 100vh;
   align-items: center;
-  padding: 100px 5% 50px;
+  padding: 6.25rem 5% 3.125rem;
   background-image: url(${props => props.backgroundImage});
   background-size: cover;
   background-position: center;
   position: relative;
   transition: background-image 1s ease-in-out;
-
+  @media (max-width: 768px) {
+    padding: 5rem 5% 2rem;
+  }
   &::before {
     content: '';
     position: absolute;
@@ -82,7 +99,7 @@ const HeroSection = styled.section`
 `;
 
 const HeroContent = styled.div`
-  max-width: 600px;
+  max-width: 37.5rem;
   position: relative;
   z-index: 1;
   color: #FFFFFF;
@@ -90,57 +107,67 @@ const HeroContent = styled.div`
 `;
 
 const HeroTitle = styled.h1`
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   line-height: 1.2;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 const HeroSubtitle = styled.p`
-  font-size: 20px;
-  margin-bottom: 30px;
+  font-size: 1.25rem;
+  margin-bottom: 1.875rem;
   font-weight: 300;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const CTAButton = styled.a`
   display: inline-block;
   background-color: #0056b3;
   color: #FFFFFF;
-  padding: 12px 24px;
-  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.3125rem;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
-
   &:hover {
     background-color: #003d82;
   }
 `;
 
 const Section = styled.section`
-  padding: 100px 5%;
+  padding: 6.25rem 5%;
   background-color: ${props => props.backgroundColor || '#f8f9fa'};
+  @media (max-width: 768px) {
+    padding: 3rem 5%;
+  }
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 42px;
+  font-size: 2.625rem;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 3.75rem;
   color: #2c3e50;
   font-weight: 700;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 const FeatureGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  max-width: 1200px;
+  gap: 2.5rem;
+  max-width: 75rem;
   margin: 0 auto;
-
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
   }
-
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
@@ -148,27 +175,25 @@ const FeatureGrid = styled.div`
 
 const FeatureCard = styled.div`
   background-color: #ffffff;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   overflow: hidden;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.9375rem 1.875rem rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 40px;
-
+  padding: 2.5rem;
   &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.625rem);
+    box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.2);
   }
 `;
 
 const FeatureIcon = styled.div`
-  font-size: 64px;
+  font-size: 4rem;
   color: #3498db;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   transition: transform 0.3s ease;
-
   ${FeatureCard}:hover & {
     transform: scale(1.1);
   }
@@ -181,65 +206,56 @@ const FeatureContent = styled.div`
 `;
 
 const FeatureTitle = styled.h3`
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   color: #2c3e50;
-  font-weight: 600;
 `;
 
 const FeatureDescription = styled.p`
-  font-size: 16px;
-  line-height: 1.6;
-  color: #34495e;
-  flex-grow: 1;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
 `;
 
 const FeatureLink = styled.a`
-  display: inline-flex;
-  align-items: center;
   color: #3498db;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
+  font-weight: bold;
+  margin-top: auto;
   transition: color 0.3s ease;
-
   &:hover {
     color: #2980b9;
-  }
-
-  &::after {
-    content: '→';
-    margin-left: 8px;
-    transition: transform 0.3s ease;
-  }
-
-  &:hover::after {
-    transform: translateX(5px);
   }
 `;
 
 const StatGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 1000px;
+  gap: 2rem;
+  max-width: 75rem;
   margin: 0 auto;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const StatCard = styled.div`
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  padding: 2rem;
   text-align: center;
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
 `;
 
 const StatNumber = styled.h3`
-  font-size: 48px;
-  color: #0056b3;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  color: #3498db;
+  margin-bottom: 0.625rem;
 `;
 
 const StatDescription = styled.p`
-  font-size: 18px;
-  color: #555;
+  font-size: 1rem;
+  color: #7f8c8d;
 `;
 
 function App() {
@@ -259,10 +275,10 @@ function App() {
       <Header>
         <Logo src={logoImage} alt="UnifyCX Logo" />
         <Nav>
-          <NavLink href="#capabilities">Capabilities</NavLink>
-          <NavLink href="#ai-platform">AI Platform</NavLink>
-          <NavLink href="#resources">Resources</NavLink>
+          <NavLink href="#home">Home</NavLink>
           <NavLink href="#about">About</NavLink>
+          <NavLink href="#services">Services</NavLink>
+          <NavLink href="#contact">Contact</NavLink>
         </Nav>
       </Header>
       <HeroSection backgroundImage={images[currentImageIndex]}>
